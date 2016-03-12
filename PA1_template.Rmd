@@ -274,8 +274,8 @@ mean_data <- aggregate(activity$steps,
                        by=list(activity$daytype, 
                                activity$weekday, activity$interval), mean)
 
-# Rename the attributes
-names(mean_data) <- c("daytype", "weekday", "interval", "mean")
+# Rename the attributes here
+names(mean_data) <- c("daytype", "weekdays", "interval", "mean")
 ```
 
 We display the first few rows of the `mean_data` data frame:
