@@ -17,7 +17,7 @@ function.
 rm(list=ls())
 
 # Load the raw activity data
-activity_raw <- read.csv("./activity/activity.csv", stringsAsFactors=FALSE)
+activity_raw <- read.csv("activity.csv", stringsAsFactors=FALSE)
 ```
 
 2. Process/transform the data (if necessary) into a format suitable for analysis
@@ -38,7 +38,7 @@ activity_raw <- cbind(activity_raw,
                                      activity_raw$weekday == "sunday", "weekend", 
                                      "weekday"))
 
-# Create the final data.frame
+# Create the final data frame (data.frame)
 activity <- data.frame(date=activity_raw$date, 
                        weekday=activity_raw$weekday, 
                        daytype=activity_raw$daytype, 
